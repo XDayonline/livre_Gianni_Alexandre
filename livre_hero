@@ -4,16 +4,16 @@
 
 cd $1
 
+clear
+
 cat page1.txt
 
 NBPAGE=1
-
 
 while [ $NBPAGE -ne 11 ] && [ $NBPAGE -ne 14 ] && [ $NBPAGE -ne 4 ] && [ $NBPAGE -ne 10 ] && [ $NBPAGE -ne 6 ] && [ $NBPAGE -ne 15 ]
 do
 	
 	read CHOIX
-
 
 	if [ $CHOIX -eq $(($NBPAGE*2)) ] || [ $CHOIX -eq $(($NBPAGE*2+1)) ]
 	then
@@ -27,9 +27,7 @@ do
 	fi
 	NBPAGE=$CHOIX
 
-
 done
-
 
 
 if [ $NBPAGE -eq 11 ] || [ $NBPAGE -eq 14 ]
